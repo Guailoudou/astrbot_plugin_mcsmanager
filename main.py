@@ -301,7 +301,7 @@ class MCSMPlugin(Star):
             # 兼容 v10 API，查询指定节点下的实例
             instances_resp = await self.make_mcsm_request(
                 "/service/remote_service_instances",
-                params={"daemonId": node_uuid, "page": 1, "page_size": 100}
+                params={"daemonId": node_uuid, "page": 1, "page_size": 9999}
             )
 
             if instances_resp.get("status") != 200:
