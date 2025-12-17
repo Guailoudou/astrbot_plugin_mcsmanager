@@ -156,8 +156,8 @@ class MCSMPlugin(Star):
 
     def is_admin_or_authorized(self, event: AstrMessageEvent) -> bool:
         """检查用户权限"""
-        if event.is_admin():
-            return True
+        # if event.is_admin():
+        #     return True
         return str(event.get_sender_id()) in self.config.get("authorized_users", [])
 
     def _get_instance_by_identifier(self, identifier: str) -> Optional[Tuple[str, str]]:
